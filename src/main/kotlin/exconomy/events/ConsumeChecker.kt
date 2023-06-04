@@ -19,7 +19,7 @@ object ConsumeChecker : Listener {
         val lore = event.item?.itemMeta?.lore ?: return
 
         // displayName() is a return component and can't compare
-        if (event.item?.itemMeta?.displayName != CHECK_ITEM_NAME) return
+//        if (event.item?.itemMeta?.displayName != CHECK_ITEM_NAME) return
         if (lore.size != 1) return
 
         // player works
