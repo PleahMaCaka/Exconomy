@@ -41,7 +41,7 @@ object ConsumeChecker : Listener {
         if (event.item?.type != LOTTO_ITEM) return
         val lore = event.item?.itemMeta?.lore ?: return
 
-        if (event.item?.itemMeta?.displayName != LOTTO_ITEM_NAME) return
+//        if (event.item?.itemMeta?.displayName != LOTTO_ITEM_NAME) return
         if (lore.size != 2) return
 
         val player = event.player
