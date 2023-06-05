@@ -1,14 +1,13 @@
 package exconomy.events
 
 import exconomy.items.CHECK_ITEM
-import exconomy.items.CHECK_ITEM_NAME
 import exconomy.items.LOTTO_ITEM
-import exconomy.items.LOTTO_ITEM_NAME
 import net.kyori.adventure.text.Component
 import org.bukkit.ChatColor
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerInteractEvent
+import utils.getTotalExp
 
 object ConsumeChecker : Listener {
 
@@ -30,7 +29,7 @@ object ConsumeChecker : Listener {
 
         // send messages
         player.sendMessage(
-            Component.text("경험치 수표를 사용했습니다!    ${ChatColor.GREEN}[ ${player.totalExperience} -> ${lore[0]} ]")
+            Component.text("경험치 수표를 사용했습니다!    ${ChatColor.GREEN}[ +${lore[0]} -> ${getTotalExp(player)} ]")
         )
     }
 
